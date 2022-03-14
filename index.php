@@ -33,7 +33,7 @@
 <body>
   <section id="navigation-bar">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="../front page/index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="ASSETS/icon.png" width="50" height="50" class="d-inline-block align-top" alt="">
         Brain Quest
       </a>
