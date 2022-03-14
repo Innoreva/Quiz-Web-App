@@ -2,10 +2,11 @@ body {
   margin: 0px;
   text-align: center;
   font-family: sans-serif;
-  background-image: url('front.jpg');
+  background-image: url('../ASSETS/front.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  opacity: 85%;
 }
 
 hr {
@@ -28,7 +29,13 @@ h3 {
 
 .navbar {
   background-color: #0b1321;
-  opacity: 85%;
+  opacity: 100%;
+  font-size: 20px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.navbar-brand {
+  font-size: 30px;
 }
 
 .nav-item {
@@ -39,66 +46,71 @@ h3 {
   margin-top: 0px;
   padding-top: 12rem;
   padding-bottom: 15rem;
+  background-color: rgba(11,19,33, 0.25);
 }
-
-
 
 .name {
   font-size: 6.625rem;
   color: cyan;
   font-family: 'Audiowide', cursive;
-  margin: 30px auto 55px auto;
+  margin: 30px auto 30px auto;
   font-weight: normal;
   -webkit-text-stroke: 2px black;
-   text-shadow:
-       5px 5px 0 #FF00E7,
-     -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+  text-shadow:
+    5px 5px 0 #FF00E7,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .subhead {
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   color: cyan;
-  font-size: 5rem;
+  font-size: 6rem;
   padding-bottom: 3.5rem;
-   text-shadow:
-       3px 3px 0 #FF00E7,
-     -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+  -webkit-text-stroke: 0.00001rem black;
+  text-decoration: overline 4px;
+  text-shadow:
+    3px 3px 0 #FF00E7,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
+/* CUSTOM CSS FOR THE BEGIN BUTTON  */
 
-
-
-
-button, button::after {
-  width: 280px;
-  height: 86px;
-  font-size: 56px;
-  font-family: 'Bebas Neue', cursive;
-  background: linear-gradient(45deg, transparent 5%, cyan 5%);
+.spec, button::after {
+  width: 230px;
+  height: 66px;
+  font-size: 36px;
+  font-family: 'Audiowide', cursive;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    3px 3px 0 #7e008a,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  background: linear-gradient(45deg, transparent 5%, #00b8eb 5%);
   border: 0;
   color: #FF00E7;
   letter-spacing: 3px;
-  line-height: 88px;
+  line-height: 0px;
   box-shadow: 6px 0px 0px #FF00E7;
   position: relative;
-  opacity: 85%;
+  opacity: 100%;
 }
 
-button::after {
+.spec::after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
   --slice-3: inset(10% -6px 85% 0);
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
-
   content: 'AVAILABLE NOW';
   display: block;
   position: absolute;
@@ -111,7 +123,7 @@ button::after {
   clip-path: var(--slice-0);
 }
 
-button:hover::after {
+.spec:hover::after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
@@ -121,53 +133,57 @@ button:hover::after {
     clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
   }
+
   10% {
     clip-path: var(--slice-3);
     transform: translate(10px, 10px);
   }
+
   20% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
   }
+
   30% {
     clip-path: var(--slice-3);
     transform: translate(0px, 5px);
   }
+
   40% {
     clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
   }
+
   50% {
     clip-path: var(--slice-3);
     transform: translate(5px, 0px);
   }
+
   60% {
     clip-path: var(--slice-4);
     transform: translate(5px, 10px);
   }
+
   70% {
     clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
   }
+
   80% {
     clip-path: var(--slice-5);
     transform: translate(20px, -10px);
   }
+
   90% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
   }
+
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
   }
 }
-
-
-
-
-
-
 
 
 .bottom-container {
@@ -177,36 +193,31 @@ button:hover::after {
   opacity: 85%;
 }
 
-.love{
+.love {
   color: white;
   font-size: 0.9rem;
 }
 
-.open-source
-{
+.open-source {
   color: white;
   font-size: 0.8rem;
 }
 
-.open-source a
-{
+.open-source a {
   text-align: center;
   text-decoration: none;
   color: #322d6e;
 }
 
-.open-source a:hover
-{
+.open-source a:hover {
   color: #DBEDF3;
   text-decoration: underline;
   font-weight: lighter;
-
   /* This prevents movement of other text when the weight is changed to lighter from bold on hover */
   letter-spacing: 0.5px;
 }
 
 @media (max-width: 974px) {
-
   .name {
     font-size: 4rem;
     color: cyan;
@@ -221,5 +232,4 @@ button:hover::after {
     font-size: 1.5rem;
     padding-bottom: 3.5rem;
   }
-
 }

@@ -7,7 +7,7 @@
 
   <!-- STYLESHEETS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="CSS/front_style.css">
 
 
   <!-- ICON -->
@@ -15,15 +15,10 @@
 
 
   <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 
   <!-- SCRIPTS -->
@@ -38,6 +33,10 @@
 <body>
   <section id="navigation-bar">
     <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="../front page/index.html">
+        <img src="ASSETS/icon.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        Brain Quest
+      </a>
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -48,10 +47,10 @@
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../login-page/index.html">Log in</a>
+              <a class="nav-link" href="login.php">Log in</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../registration-page/index.html">Register</a>
+              <a class="nav-link" href="register.php">Register</a>
             </li>
         </div>
       </div>
@@ -61,11 +60,10 @@
 
   <section id="front-page">
     <div class="top-container">
-          <h1 class="name">BRAIN QUEST</h1>
-          <h2 class="subhead">QUIZ TIME</h2>
-          <link rel="preconnect" href="https://fonts.gstatic.com">
-          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-          <button>BEGIN</button>
+      <h1 class="name">BRAIN QUEST</h1>
+      <i class="fad fa-head-side-brain"></i>
+      <h2 class="subhead">QUIZ TIME</h2>
+      <button class="spec">BEGIN</button>
     </div>
   </section>
 
