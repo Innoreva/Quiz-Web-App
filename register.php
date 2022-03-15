@@ -93,23 +93,25 @@
 
     <div class="container">
         <h1>Register Here</h1>
+        <form method="post" action="register.php">
         <div class="box">
             <i class="fa-solid fa-user"></i>
-            <input type="username" name="useranme" id="username" placeholder="Username">
+            <input type="username" name="name" id="username" placeholder="Username">
         </div>
         <div class="box">
             <i class="fa-solid fa-envelope"></i>
-            <input type="Email ID" name="" id="Email ID" placeholder="Email ID">
+            <input type="Email ID" name="email" id="Email ID" placeholder="Email ID">
         </div>
         <div class="box">
             <i class="fa-solid fa-building-columns"></i>
-            <input type="College" name="" id="College" placeholder="College">
+            <input type="College" name="college" id="College" placeholder="College">
         </div>
         <div class="box">
             <i class="fa-solid fa-key"></i>
             <input type="password" name="password" id="password" placeholder="Password">
         </div>
-        <button class="spec">Register</button>
+        <button class="spec" name="register">Register</button>
+       </form>
     </div>
 </body>
 

@@ -80,7 +80,7 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Log in</a>
+              <a class="nav-link active" aria-current="page" href="login.php">Log in</a>
 
             </li>
             <li class="nav-item">
@@ -96,18 +96,20 @@
     <div class="Login">
       <h1>Log In</h1>
     </div>
+    <form method="post" action="login.php">
     <div class="box">
-      <i class="fa-solid fa-user"></i>
-      <input type="username" name="useranme" id="username" placeholder="Username">
-    </div>
+            <i class="fa-solid fa-envelope"></i>
+            <input type="Email ID" name="email" id="Email ID" placeholder="Email ID">
+        </div>
     <div class="box">
       <i class="fa-solid fa-key"></i>
       <input type="password" name="password" id="password" placeholder="Password">
     </div>
-    <button class="spec">Enter</button>
+    <button class="spec" name="login">Enter</button>
     <div class="register">
-      <a class="new_here" href="..\registration-page\index.html">New Here ?</a>
+      <a class="new_here" href="register.php">New Here ?</a>
     </div>
+    </form>
   </div>
 </body>
 
