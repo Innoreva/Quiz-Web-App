@@ -66,7 +66,7 @@
 
   <section id="navigation-bar">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="../front page/index.html">
+      <a class="navbar-brand" href="../front page/index.php">
         <img src="ASSETS/icon.png" width="50" height="50" class="d-inline-block align-top" alt="">
         Brain Quest
       </a>
@@ -106,7 +106,7 @@
     </div>
     <button class="spec">Enter</button>
     <div class="register">
-      <a class="new_here" href="..\registration-page\index.html">New Here ?</a>
+      <a class="new_here" href="register.php">New Here ?</a>
     </div>
   </div>
 </body>
