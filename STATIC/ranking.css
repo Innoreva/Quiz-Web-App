@@ -1,0 +1,77 @@
+html{
+    margin: 0px;
+  }
+  body {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    background-image: url('background2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+  }
+  h1{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    font-weight: normal;
+    -webkit-text-stroke: 1px black;
+    text-shadow:
+      2px 2px 0 #FF00E7,
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 8px;
+    letter-spacing: 2px;
+  }
+  .navbar {
+    background-color: rgba(11, 19, 33, 0.85);
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+  }
+  .navbar-brand {
+    font-size: 30px;
+  }
+  
+  .nav-item {
+    padding: 5px;
+    padding: 5px 20px;
+  }
+  
+  .container{
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    left: 0;
+  }
+  .inside{
+    opacity: 85%;
+    width: 80%;
+    height: 60vh;
+    margin : 100px auto;
+    background-color: rgba(11, 19, 33, 0.85);
+    border-radius: 40px;
+  }
+  .heading {
+    padding: 2rem 0;
+  }
+  .content{
+    margin: 1rem auto;
+  }
+  .col1{
+      padding-right:17px;
+  }
+  .col2{
+      padding-right: 33px;
+  }
+  .col3{
+      padding-left:20px;
+  }
+  .col4{
+      padding-left:37px;
+  }
