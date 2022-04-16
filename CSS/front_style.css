@@ -8,7 +8,6 @@ body {
   background-size: cover;
   opacity: 85%;
 }
-
 hr {
   border: solid #00818A 3px;
   border-bottom: none;
@@ -40,6 +39,11 @@ h3 {
 
 .nav-item {
   padding: 5px;
+}
+
+a, a:hover, a:focus, a:active{
+  text-decoration: none;
+  color: inherit;
 }
 
 .top-container {
@@ -81,6 +85,7 @@ h3 {
 }
 
 /* CUSTOM CSS FOR THE BEGIN BUTTON  */
+
 
 .spec, button::after {
   width: 230px;
