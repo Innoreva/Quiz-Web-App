@@ -8,7 +8,6 @@ body {
   background-size: cover;
   opacity: 85%;
 }
-
 hr {
   border: solid #00818A 3px;
   border-bottom: none;
@@ -81,6 +80,10 @@ h3 {
 }
 
 /* CUSTOM CSS FOR THE BEGIN BUTTON  */
+a, a:hover, a:focus, a:active{
+  text-decoration: none;
+  color: inherit;
+}
 
 .spec, button::after {
   width: 230px;
