@@ -63,7 +63,7 @@
       <h1 class="name">BRAIN QUEST</h1>
       <i class="fad fa-head-side-brain"></i>
       <h2 class="subhead">QUIZ TIME</h2>
-      <button class="spec" href="login.php">BEGIN</button>
+      <button class="spec"><a href="login.php">BEGIN</a></button>
     </div>
   </section>
 
