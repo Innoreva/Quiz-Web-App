@@ -5,9 +5,10 @@ html{
   margin: 0px;
 }
 body{
-    background: url('../ASSETS/background1.jpg') ;
+    background: url('../ASSETS/background2.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(11, 19, 33, 0.85);
 }
 
 
@@ -69,7 +70,6 @@ body{
     height: 30px;
     width: 40px;
     text-align: center;
-    background-color: rgba(11, 19, 33, 0.85);
   }
 
   #countdown-number {
@@ -88,6 +88,7 @@ body{
   }
 
   svg circle {
+    background-color: rgba(11, 19, 33, 0.85);
     stroke-dasharray: 113px;
     stroke-dashoffset: 0px;
     stroke-linecap: round;
