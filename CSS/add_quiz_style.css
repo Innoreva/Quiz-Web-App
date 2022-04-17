@@ -6,8 +6,8 @@ margin: 0px;
 }
 body{
   background: url('../ASSETS/background2.jpg') ;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 h1{

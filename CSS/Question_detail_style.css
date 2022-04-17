@@ -1,79 +1,148 @@
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html{
-  margin: 0px;
+margin: 0px;
 }
 body{
-    background: url('../ASSETS/background2.jpg') ;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('../ASSETS/background2.jpg') ;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 h1{
-  font-size: 2rem;
-  color: white;
-  font-family: 'Audiowide', cursive;
-  font-weight: normal;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    2px 2px 0 #FF00E7,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+padding: 2rem;
+font-size: 3rem;
+color: white;
+font-family: 'Audiowide', cursive;
+font-weight: normal;
+-webkit-text-stroke: 1px black;
+text-shadow:
+  2px 2px 0 #FF00E7,
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
+
 h3 {
-  font-size: 1.3rem;
-  margin-top: 8px;
-  letter-spacing: 2px;
+color: white;
+font-size: 2rem;
+font-family: 'Audiowide', cursive;
+margin-top: 8px;
+letter-spacing: 2px;
 }
+
 .container{
-  position: absolute;
-  height: 100vh;
-  right: 0;
-  left: 0;
+position: absolute;
+text-align: center;
+height: 100vh;
+right: 0;
+left: 0;
 }
 
 .inside{
-  font-family: 'Oswald', sans-serif;
-  width: 100%;
-  height: 90vh;
-  margin : 80px auto;
-  padding-top: 10px;
-  background-color: rgba(11, 19, 33, 0.85);
-  border-radius: 40px;
-}
-.box {
-  width: 100%;
-  margin: 30px 0px;
-  border-bottom: 2px solid #FF00E7;
-  opacity: 100%;
+font-family: 'Oswald', sans-serif;
+width: 100%;
+height: 120vh;
+margin : 80px auto;
+padding-top: 10px;
+background-color: rgba(11, 19, 33, 0.85);
+border-radius: 40px;
 }
 
-.box input {
-  font-family: 'Bebas Neue', cursive;
-  background: none;
-  width: 75%;
-  padding: 5px 2px;
+/*Navigation Bar*/
+
+.navbar {
+  background-color: rgba(11, 19, 33, 0.85);
   font-size: 20px;
-  line-spacing: 10px;
-  border: none;
-  outline: none;
+  font-family: 'Bebas Neue', cursive;
+}
+.navbar-brand {
+  font-size: 30px;
+}
+
+.nav-item {
+  padding: 5px;
+  padding: 5px 20px;
+}
+
+
+input[type=text] {
+margin: 20px;
+padding: 10px;
+height: 3rem;
+width: 20rem;
+position: relative;
+left: 0;
+outline: none;
+border: 1px solid #cdcdcd;
+border-color: #FF00E7;
+background-color: rgba(245, 39, 145, 0.2);
+font-size: 1rem;
+color: white;
+}
+
+input[type=number] {
+margin: 15px;
+padding: 25px;
+height: 3rem;
+width: 21rem;
+position: relative;
+left: 0;
+outline: none;
+border: 1px solid #cdcdcd;
+border-color: #FF00E7;
+background-color: rgba(245, 39, 145, 0.2);
+font-size: 16px;
+color: white;
+}
+
+::placeholder {
+color: white;
+opacity: 0.7;
+font-size: 1rem;
+}
+
+.purple-border{
+position: relative;
+width: 60%;
+margin: auto;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.purple-border textarea {
+  border: 1px solid #ba68c8;
+  background-color: rgba(245, 39, 145, 0.2);
+  color: white;
+}
+.purple-border .form-control:focus {
+  border: 1px solid #ba68c8;
+  box-shadow: 0 0 0 0.5rem rgba(186, 104, 200, .5);
+  background-color: rgba(245, 39, 145, 0.3);
   color: white;
 }
 
-  /*Navigation Bar*/
 
-  .navbar {
-    background-color: rgba(11, 19, 33, 0.85);
-    font-size: 20px;
-    font-family: 'Bebas Neue', cursive;
-  }
-  .navbar-brand {
-    font-size: 30px;
-  }
+b{
+margin:20px;
+  color: white;
+  font-size: 2 rem;
+  font-family: 'Audiowide', cursive;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
 
-  .nav-item {
-    padding: 5px;
-    padding: 5px 20px;
-  }
+.form-select{
+opacity: 0.5;
+margin: auto;
+margin-top: 20px;
+width: 30%;
+}
+
+
+.btn{
+font-size: 1.3rem;
+margin: 2rem;
+}

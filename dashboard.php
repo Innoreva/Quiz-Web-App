@@ -24,6 +24,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS/dashboard_style.css">
   <link rel="stylesheet" href="CSS/add_quiz_style.css">
+  <link rel="stylesheet" href="CSS/Question_detail_style.css">
 
 
   <!-- ICON -->
@@ -77,10 +78,8 @@
 
   </section>
 
-    <div class="container">
-      <div class="inside">
-
-      
+  <div class="container">
+        <div class="inside">
       <?php if(@$_GET['q']==0)
                 {
                    echo "<h1> WELCOME TO Admin Page!!
@@ -90,7 +89,7 @@
                 if(@$_GET['q']== 2) 
                 {
                     $q=mysqli_query($con,"SELECT * FROM rank  ORDER BY score DESC " )or die('Error223');
-                    echo  '<div class="row heading">
+                    echo  ' <div class="row heading">
      <div class="col">
        <h1>Rank</h1>
      </div>
@@ -177,7 +176,7 @@ $c=0;
                       <?php
                     if(@$_GET['q']==4 && !(@$_GET['step']) ) 
                     {
-                        echo ' <div class="row heading">
+                        echo '<div class="row heading">
                         <h1>Enter Quiz Details</h1>
                       </div>
                       <form method="POST" action="update.php?q=addquiz" name="form                          ">
@@ -194,10 +193,61 @@ $c=0;
                           <input type="number" name="wrong" id="wrong" placeholder="Enter minus marks on wrong answer without sign">
                         </div>
                 
-                        <button type="button" class="btn btn-outline-light">Enter</button>
+                        <button type="submit" class="btn btn-outline-light">Enter</button>
                       </form>';
                     }
                     ?>
+                    
+                <?php
+                    if(@$_GET['q']==4 && (@$_GET['step'])==2 ) 
+                    {
+                        echo '  <div class="row heading">
+                        <h1>Enter Question Details</h1>
+                    </div>
+                    <form name="form" action="update.php?q=addqns&n='.@$_GET['n'].'&eid='.@$_GET['eid'].'&ch=4 "  method="POST">';
+
+                    for($i=1;$i<=@$_GET['n'];$i++)
+                    {
+                        echo '
+                        <div class="inside">
+                       <div>
+                        <h3>Question &nbsp;'.$i.'&nbsp; : </h3>
+                    </div>
+                    <div class="box" for="qns'.$i.' ">
+                    <div class="form-group purple-border">
+                      <textarea class="form-control"  name="qns'.$i.'" id="exampleFormControlTextarea4" rows="3" placeholder="Enter the question number '.$i.' here....."></textarea>
+                      </div>
+                  </div>
+                  <div class="box" for="'.$i.'1">
+                      <input  id="'.$i.'1" name="'.$i.'1"  type="text" placeholder="Enter option a">
+                  </div>
+                  <div class="box" for="'.$i.'2">
+                      <input  id="'.$i.'2" name="'.$i.'2"  type="text" placeholder="Enter option b">
+                  </div>
+                  <div class="box" for="'.$i.'3">
+                      <input id="'.$i.'3" name="'.$i.'3" type="text" placeholder="Enter option c">
+                  </div>
+                  <div class="box" for="'.$i.'4">
+                      <input id="'.$i.'4" name="'.$i.'4" type="text" placeholder="Enter option d">
+                  </div>
+                  <br />
+                  <b>Correct answer: </b>
+                  <div class="box">
+                      <select id="ans'.$i.'" name="ans'.$i.'" class="form-select">
+                        <option selected>Correct answer for question '.$i.'</option>
+                        <option value="a">Option A</option>
+                        <option value="b">Option B</option>
+                        <option value="c">Option C</option>
+                        <option value="d">Option D</option>
+                      </select><br /><br />
+                  </div></div>';
+                    }
+                    echo '
+                  <button type="submit" class="btn btn-outline-light">Enter</button>
+              </form>';
+                    }
+                    ?>
+                    </div></div>
                     
             
 

@@ -230,6 +230,21 @@ if (!(isset($_SESSION['email']))) {
                         </div>
                         </div>';
                 }
+                $q=mysqli_query($con,"SELECT * FROM rank WHERE  email='$email' " )or die('Error157');
+                        while($row=mysqli_fetch_array($q) )
+                        {
+                            $s=$row['score'];
+                            echo ' <div class="row content" style="color:#66CCFF">
+                            <div class="col">
+                                <h3>Overall Score </h3>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </div>
+                            <div class="col">
+                                <h3>' . $s . '</h3>
+                            </div>
+                            </div>
+                           ';
+                        }
             }
             ?>
 
