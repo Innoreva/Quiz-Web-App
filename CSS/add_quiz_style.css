@@ -5,13 +5,35 @@ html{
   margin: 0px;
 }
 body{
-    background: url('../ASSETS/background1.jpg') ;
+    background: url('../ASSETS/background2.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+h1{
+  padding: 2rem;
+  font-size: 3rem;
+  color: white;
+  font-family: 'Audiowide', cursive;
+  font-weight: normal;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    2px 2px 0 #FF00E7,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
 .container{
   position: absolute;
+  text-align: center;
   height: 100vh;
   right: 0;
   left: 0;
@@ -42,3 +64,57 @@ body{
     padding: 5px;
     padding: 5px 20px;
   }
+
+
+  input[type=text] {
+  margin: 30px;
+  padding: 1rem;
+  height: 5rem;
+  width: 30rem;
+  position: relative;
+  left: 0;
+  outline: none;
+  border: 1px solid #cdcdcd;
+  border-color: #FF00E7;
+  background-color: rgba(245, 39, 145, 0.2);
+  font-size: 1.5rem;
+  color: white;
+}
+
+input[type=number] {
+margin: 15px;
+padding: 25px;
+height: 3rem;
+width: 21rem;
+position: relative;
+left: 0;
+outline: none;
+border: 1px solid #cdcdcd;
+border-color: #FF00E7;
+background-color: rgba(245, 39, 145, 0.2);
+font-size: 16px;
+color: white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.6;
+  font-size: 1rem;
+}
+
+#name::placeholder {
+  color: white;
+  opacity: 0.6;
+  font-size: 1.5rem;
+}
+
+#wrong::placeholder {
+  color: white;
+  opacity: 0.6;
+  font-size: 0.75rem;
+}
+
+.btn{
+  font-size: 1.5rem;
+  margin: 4rem;
+}
