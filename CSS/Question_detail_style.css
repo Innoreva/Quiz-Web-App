@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+html{
+  margin: 0px;
+}
+body{
+    background: url('../ASSETS/background2.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+  font-size: 2rem;
+  color: white;
+  font-family: 'Audiowide', cursive;
+  font-weight: normal;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    2px 2px 0 #FF00E7,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+h3 {
+  font-size: 1.3rem;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+.container{
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  left: 0;
+}
+
+.inside{
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  height: 90vh;
+  margin : 80px auto;
+  padding-top: 10px;
+  background-color: rgba(11, 19, 33, 0.85);
+  border-radius: 40px;
+}
+.box {
+  width: 100%;
+  margin: 30px 0px;
+  border-bottom: 2px solid #FF00E7;
+  opacity: 100%;
+}
+
+.box input {
+  font-family: 'Bebas Neue', cursive;
+  background: none;
+  width: 75%;
+  padding: 5px 2px;
+  font-size: 20px;
+  line-spacing: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+  /*Navigation Bar*/
+
+  .navbar {
+    background-color: rgba(11, 19, 33, 0.85);
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+  }
+  .navbar-brand {
+    font-size: 30px;
+  }
+
+  .nav-item {
+    padding: 5px;
+    padding: 5px 20px;
+  }

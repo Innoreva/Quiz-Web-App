@@ -23,6 +23,7 @@
   <!-- STYLESHEETS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS/dashboard_style.css">
+  <link rel="stylesheet" href="CSS/add_quiz_style.css">
 
 
   <!-- ICON -->
@@ -67,13 +68,13 @@
             <li <?php if(@$_GET['q']==2) echo'class="active"'; ?> class="nav-item">
               <a class="nav-link" href="dashboard.php?q=2">Ranking</a>
             </li>
-            <li class="nav-item" class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5) echo'active"'; ?>">
+            <li class="nav-item" class="dropdown <?php if(@$_GET['q']==4) echo'active"'; ?>">
               <a class="nav-link" href="dashboard.php?q=4">Add Quiz</a>
             </li>
         </div>
       </div>
     </nav>
-    
+
   </section>
 
     <div class="container">
@@ -136,19 +137,16 @@
 
   <div class="row heading">
  <div class="col">
-   <h3>S.No</h3>
+   <h1>S.No</h1>
  </div>
  <div class="col">
-   <h3>Name</h3>
+   <h1>Name</h1>
  </div>
  <div class="col">
-   <h3>College</h3>
+   <h1>College</h1>
  </div>
  <div class="col">
- <h3>Email</h3>
-</div>
-<div class="col">
-<h3>Action</h3>
+ <h1>Email</h1>
 </div>
  </div>';
  $c=1;
@@ -171,9 +169,6 @@
 <div class="col">
   <h3>'.$email.'</h3>
 </div>
-<div class="col">
-<a title="Delete User" href="update.php?demail='.$email.'"><b><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></b></a>
-</div>
 </div>';
 }
 $c=0;
@@ -182,28 +177,25 @@ $c=0;
                       <?php
                     if(@$_GET['q']==4 && !(@$_GET['step']) ) 
                     {
-                        echo ' <div class="AddQuiz">
+                        echo ' <div class="row heading">
                         <h1>Enter Quiz Details</h1>
                       </div>
-                         <form method="post" action="update.php?q=addquiz">
-    <div class="box">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="text" name="name" id="name" placeholder="Enter Quiz Title">
-        </div>
-    <div class="box">
-      <i class="fa-solid fa-key"></i>
-      <input type="number" name="total" id="total" placeholder="Enter total number of questions">
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-key"></i>
-      <input type="number" name="right" id="right" placeholder="Enter marks on right answer">
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-key"></i>
-      <input type="number" name="wrong" id="wrong" placeholder="Enter minus marks on wrong answer without sign">
-    </div>
-    <button class="spec" type="submit" value="Submit">Enter</button>
-    </form>';
+                      <form method="POST" action="update.php?q=addquiz" name="form                          ">
+                        <div class="box">
+                          <input type="text" name="name" id="name" placeholder="Enter Quiz Title">
+                        </div>
+                        <div class="box">
+                          <input type="number" name="total" id="total" placeholder="Enter total number of questions">
+                        </div>
+                        <div class="box">
+                          <input type="number" name="right" id="right" placeholder="Enter marks on right answer">
+                        </div>
+                        <div class="box">
+                          <input type="number" name="wrong" id="wrong" placeholder="Enter minus marks on wrong answer without sign">
+                        </div>
+                
+                        <button type="button" class="btn btn-outline-light">Enter</button>
+                      </form>';
                     }
                     ?>
                     
