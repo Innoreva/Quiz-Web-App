@@ -37,12 +37,12 @@ html{
   .navbar-brand {
     font-size: 30px;
   }
-  
+
   .nav-item {
     padding: 5px;
     padding: 5px 20px;
   }
-  
+
   .container{
     position: absolute;
     height: 100vh;
@@ -50,28 +50,43 @@ html{
     left: 0;
   }
   .inside{
-    opacity: 85%;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
     width: 80%;
     height: 60vh;
     margin : 100px auto;
     background-color: rgba(11, 19, 33, 0.85);
     border-radius: 40px;
   }
+
   .heading {
     padding: 2rem 0;
   }
+
   .content{
     margin: 1rem auto;
   }
+
   .col1{
-      padding-right:17px;
+    padding-left: 20px;
   }
+
   .col2{
-      padding-right: 33px;
+    padding-right: 10px;
   }
+
   .col3{
-      padding-left:20px;
+padding-left: 13px;
   }
+
   .col4{
-      padding-left:37px;
+      padding-left: 39px;
+  }
+
+  .col5{
+      padding-right: 18px;
+  }
+
+  .col6{
+      padding-left:23px;
   }

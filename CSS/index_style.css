@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Bebas Neue', cursive;
   background-image: url('../ASSETS/front.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -82,6 +82,10 @@ a, a:hover, a:focus, a:active{
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+a{
+  underline: none;
 }
 
 /* CUSTOM CSS FOR THE BEGIN BUTTON  */
