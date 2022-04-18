@@ -20,8 +20,7 @@ if (!(isset($_SESSION['email']))) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/history.css">
     <link rel="stylesheet" href="CSS/ranking.css">
-    <link rel="stylesheet" href="CSS/history.css">
-    <!-- <link rel="stylesheet" href="CSS/Question.css"> -->
+    <link rel="stylesheet" href="CSS/question_style.css">
 
 
     <!-- ICON -->
@@ -67,7 +66,7 @@ if (!(isset($_SESSION['email']))) {
                         <li class="nav-item" <?php if (@$_GET['q'] == 3) echo 'class="active"'; ?>>
                             <a href="welcome.php?q=3" class="nav-link" href="#">Ranking</a>
                         </li>
-                        <li <?php echo''; ?>  class="nav-item">
+                        <li <?php echo ''; ?> class="nav-item">
                             <a class="nav-link" href="logout.php?q=welcome.php">Log Out</a>
                         </li>
                     </ul>
@@ -155,36 +154,46 @@ if (!(isset($_SESSION['email']))) {
                 $sn = @$_GET['n'];
                 $total = @$_GET['t'];
                 $q = mysqli_query($con, "SELECT * FROM questions WHERE eid='$eid' AND sn='$sn' ");
-                echo '<div class="container">
-        <div class="q">
+                echo ' <div id="countdown">
+                <div id="countdown-number"></div>
+                <svg>
+                  <circle r="18" cx="20" cy="20"></circle>
+                </svg>
+               </div>
             <div class="question">';
                 while ($row = mysqli_fetch_array($q)) {
                     $qns = $row['qns'];
                     $qid = $row['qid'];
-                    echo '<b>Question &nbsp;' . $sn . '&nbsp;::<br /><br />' . $qns . '</b><br /><br />';
+                    echo '<p><b>' . $qns . '</b></p></div>';
                 }
                 $q = mysqli_query($con, "SELECT * FROM options WHERE qid='$qid' ");
                 echo '<form action="update.php?q=quiz&step=2&eid=' . $eid . '&n=' . $sn . '&t=' . $total . '&qid=' . $qid . '" method="POST"  class="form-horizontal">
-                        <br /></div>';
+                        <br />';
 
                 while ($row = mysqli_fetch_array($q)) {
                     $option = $row['option'];
                     $optionid = $row['optionid'];
-                    echo ' <div class="options"><ol type="a"> <li class="button"><input type="radio" name="ans" value="' . $optionid . '">&nbsp;' . $option . '<br /><br /></li></ol></div>';
+                    echo ' <div class="options"><ol style="list-style: none;"> <li class="button"><input type="radio" name="ans" value="' . $optionid . '">&nbsp;' . $option . '</li></ol></div>';
                 }
-                echo '<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div></div>';
+                echo '<div><form id="form-id">
+                <input type="submit"  value="Submit">
+                     </form></div>';
             }
 
             if (@$_GET['q'] == 'result' && @$_GET['eid']) {
                 $eid = @$_GET['eid'];
                 $q = mysqli_query($con, "SELECT * FROM history WHERE eid='$eid' AND email='$email' ") or die('Error157');
-               
+
                 while ($row = mysqli_fetch_array($q)) {
                     $s = $row['score'];
                     $w = $row['wrong'];
                     $r = $row['sahi'];
                     $qa = $row['level'];
-                    echo '
+                    echo ' <div class="row heading">
+                    <div class="col">
+                    <h1>Result 📝</h1>
+                   </div>
+                    </div>
                     <div class="row content" style="color:#FFFFFF">
                         <div class="col">
                             <h3>Total Questions</h3>
@@ -195,7 +204,7 @@ if (!(isset($_SESSION['email']))) {
                         </div>
                         <div class="row content" style="color:#99cc32">
                         <div class="col">
-                            <h3>Right Answers</h3>
+                            <h3>Right Answers ✅</h3>
                             <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
                         </div>
                         <div class="col">
@@ -204,7 +213,7 @@ if (!(isset($_SESSION['email']))) {
                         </div>
                         <div class="row content" style="color:red">
                         <div class="col">
-                            <h3>Wrong Answers</h3>
+                            <h3>Wrong Answers ❌</h3>
                             <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                         </div>
                         <div class="col">
@@ -213,7 +222,7 @@ if (!(isset($_SESSION['email']))) {
                         </div>
                         <div class="row content" style="color:#66CCFF">
                         <div class="col">
-                            <h3>Score</h3>
+                            <h3>Score 📝</h3>
                             <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         </div>
                         <div class="col">
@@ -221,6 +230,21 @@ if (!(isset($_SESSION['email']))) {
                         </div>
                         </div>';
                 }
+                $q=mysqli_query($con,"SELECT * FROM rank WHERE  email='$email' " )or die('Error157');
+                        while($row=mysqli_fetch_array($q) )
+                        {
+                            $s=$row['score'];
+                            echo ' <div class="row content" style="color:#66CCFF">
+                            <div class="col">
+                                <h3>Overall Score </h3>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </div>
+                            <div class="col">
+                                <h3>' . $s . '</h3>
+                            </div>
+                            </div>
+                           ';
+                        }
             }
             ?>
 
@@ -233,19 +257,19 @@ if (!(isset($_SESSION['email']))) {
                                     <h1>S.No</h1>
                                 </div>
                                 <div class="col">
-                                    <h1>Quiz</h1>
+                                    <h1>Quiz 🧠</h1>
                                 </div>
                                 <div class="col">
-                                    <h1>Total Questions</h1>
+                                    <h1>Total Questions </h1>
                                 </div>
                                 <div class="col">
-                                    <h1>Right</h1>
+                                    <h1>Right ✅</h1>
                                 </div>
                                 <div class="col">
-                                    <h1>Wrong</h1>
+                                    <h1>Wrong ❌</h1>
                                 </div>
                                 <div class="col">
-                                    <h1>Marks</h1>
+                                    <h1>Marks 📋</h1>
                                 </div>
                             </div>';
                 $c = 0;
