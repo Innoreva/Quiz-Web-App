@@ -26,7 +26,9 @@ h1{
 }
 
 h3 {
-  font-size: 1.3rem;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Audiowide', cursive;
   margin-top: 8px;
   letter-spacing: 2px;
 }
@@ -42,7 +44,7 @@ h3 {
 .inside{
   font-family: 'Oswald', sans-serif;
   width: 100%;
-  height: 90vh;
+  height: 120vh;
   margin : 80px auto;
   padding-top: 10px;
   background-color: rgba(11, 19, 33, 0.85);
@@ -67,17 +69,17 @@ h3 {
 
 
   input[type=text] {
-  margin: 30px;
-  padding: 1rem;
-  height: 5rem;
-  width: 30rem;
+  margin: 20px;
+  padding: 10px;
+  height: 3rem;
+  width: 20rem;
   position: relative;
   left: 0;
   outline: none;
   border: 1px solid #cdcdcd;
   border-color: #FF00E7;
   background-color: rgba(245, 39, 145, 0.2);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
 }
 
@@ -98,23 +100,49 @@ color: white;
 
 ::placeholder {
   color: white;
-  opacity: 0.6;
+  opacity: 0.7;
   font-size: 1rem;
 }
 
-#name::placeholder {
-  color: white;
-  opacity: 0.6;
-  font-size: 1.5rem;
+.purple-border{
+  position: relative;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-#wrong::placeholder {
-  color: white;
-  opacity: 0.6;
-  font-size: 0.75rem;
+.purple-border textarea {
+    border: 1px solid #ba68c8;
+    background-color: rgba(245, 39, 145, 0.2);
+    color: white;
 }
+.purple-border .form-control:focus {
+    border: 1px solid #ba68c8;
+    box-shadow: 0 0 0 0.5rem rgba(186, 104, 200, .5);
+    background-color: rgba(245, 39, 145, 0.3);
+    color: white;
+}
+
+
+b{
+  margin:20px;
+    color: white;
+    font-size: 2 rem;
+    font-family: 'Audiowide', cursive;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
+
+.form-select{
+  opacity: 0.5;
+  margin: auto;
+  margin-top: 20px;
+  width: 30%;
+}
+
 
 .btn{
-  font-size: 1.5rem;
-  margin: 4rem;
+  font-size: 1.3rem;
+  margin: 2rem;
 }
